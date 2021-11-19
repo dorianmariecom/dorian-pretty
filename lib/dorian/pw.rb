@@ -3,7 +3,7 @@ require "shellwords"
 module Dorian
   class Pw
     def self.run
-      if ARGV.size < 1
+      if ARGV.size < 1 || ARGV[0] == "--help" || ARGV[0] == "-h"
         puts "USAGE: pw [FILES...]"
         exit
       end

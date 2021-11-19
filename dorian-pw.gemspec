@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "dorian-pw"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.summary = "`prettier --write [FILES...]` that allows line numbers"
   s.description =
     s.summary + "\n\n" +
@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.executables << "pw"
   s.homepage = "https://github.com/dorianmariefr/pw"
   s.license = "MIT"
+  s.metadata = { "rubygems_mfa_required" => "true" }
 end
