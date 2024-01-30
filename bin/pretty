@@ -75,7 +75,8 @@ Git
     next false if Dir.exist?(path)
     next true if ruby_filenames.include?(path)
     next true if ruby_extensions.include?(File.extname(path))
-    next true if File.open(path, &:gets) =~ /#!.*ruby/
+    first_line = File.open(path, &:gets).to_s.encode("UTF-8", invalid: :replace)
+    next true if first_line =~ /#!.*ruby/
     false
   end
   .each do |path|
