@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'dorian/pw'
-Dorian::Pw.run

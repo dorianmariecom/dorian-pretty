@@ -1,13 +1,11 @@
-# `dorian-pw`
+# `dorian-pretty`
 
-`prettier --write [FILES...]` that allows line numbers
-
-e.g. `pw app/models/user.rb:34` and `pw spec/spec_helper.rb`
+Formats files in the current directory
 
 ### Install
 
 ```bash
-gem install dorian-pw
+gem install dorian-pretty
 ```
 
 Or as part of my other gems:
@@ -18,4 +16,6 @@ gem install dorian
 
 ### Usage
 
-`pw .` :)
+`pretty`
+
+Will format all the supported files in the current directory
