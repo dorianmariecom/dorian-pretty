@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require "shellwords"
 require "git"
 require "syntax_tree"
 
-unless ARGV.size.zero?
+unless ARGV.empty?
   puts "USAGE: pretty"
   exit
 end
@@ -75,8 +76,10 @@ Git
     next false if Dir.exist?(path)
     next true if ruby_filenames.include?(path)
     next true if ruby_extensions.include?(File.extname(path))
+
     first_line = File.open(path, &:gets).to_s.encode("UTF-8", invalid: :replace)
     next true if first_line =~ /#!.*ruby/
+
     false
   end
   .each do |path|
