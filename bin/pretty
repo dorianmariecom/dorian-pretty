@@ -73,7 +73,7 @@ Git
   .ls_files
   .map(&:first)
   .select do |path|
-    next false if Dir.exist?(path)
+    next false unless File.exist?(path)
     next true if ruby_filenames.include?(path)
     next true if ruby_extensions.include?(File.extname(path))
 
