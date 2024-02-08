@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-pretty"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
   s.summary = "Formats files in the current directory"
   s.description = "#{s.summary}\n\ne.g. `pretty`"
   s.authors = ["Dorian Marié"]
