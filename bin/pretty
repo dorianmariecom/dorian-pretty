@@ -86,9 +86,8 @@ Git
   .each do |path|
     before = File.read(path)
     after = SyntaxTree.format(before)
-    if before == after
-      puts "\e[37m#{path}\e[0m"
-    else
+
+    if before != after
       puts path
       File.write(path, after)
     end
