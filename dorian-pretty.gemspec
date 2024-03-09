@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary = "Formats files in the current directory"
   s.description = "#{s.summary}\n\ne.g. `pretty`"
   s.authors = ["Dorian Marié"]
-  s.email = "dorian@dorianmarie.fr"
+  s.email = "dorian@dorianmarie.com"
   s.files = ["bin/pretty"]
   s.executables << "pretty"
   s.homepage = "https://github.com/dorianmariecom/dorian-pretty"
