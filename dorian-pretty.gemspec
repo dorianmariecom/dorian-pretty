@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-pretty"
-  s.version = "0.2.2"
+  s.version = "0.2.3"
   s.summary = "Formats files in the current directory"
   s.description = "#{s.summary}\n\ne.g. `pretty`"
   s.authors = ["Dorian Marié"]
@@ -14,4 +14,6 @@ Gem::Specification.new do |s|
   s.metadata = { "rubygems_mfa_required" => "true" }
   s.add_dependency "git", "~> 1"
   s.add_dependency "syntax_tree", "~> 6"
+
+  s.required_ruby_version = ">= 3.3.0"
 end
