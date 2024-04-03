@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 require "securerandom"
 require "tmpdir"
@@ -17,7 +19,15 @@ RSpec.describe "pretty" do
       expect(File.read(ruby_tempfile)).to eq("a = 1\n")
     end
   ensure
-    File.delete(ruby_tempfile) rescue nil
-    Dir.delete(tempdir) rescue nil
+    begin
+      File.delete(ruby_tempfile)
+    rescue StandardError
+      nil
+    end
+    begin
+      Dir.delete(tempdir)
+    rescue StandardError
+      nil
+    end
   end
 end
