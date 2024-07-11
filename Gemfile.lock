@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dorian-pretty (0.3.0)
+    dorian-pretty (0.3.1)
       git
       syntax_tree
 
