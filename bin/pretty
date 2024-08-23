@@ -1,13 +1,16 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "shellwords"
+require "dorian/arguments"
 require "git"
 require "syntax_tree"
 
-unless ARGV.empty?
-  puts "USAGE: pretty"
-  exit
+parsed = Dorian::Arguments.parse(version: { alias: :v }, help: { alias: :h })
+
+abort parsed.help if parsed.options.help
+
+if parsed.options.version
+  abort File.read(File.expand_path("../../VERSION", __FILE__))
 end
 
 ruby_extensions = %w[
