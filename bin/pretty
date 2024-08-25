@@ -10,7 +10,7 @@ parsed = Dorian::Arguments.parse(version: { alias: :v }, help: { alias: :h })
 abort parsed.help if parsed.options.help
 
 if parsed.options.version
-  abort File.read(File.expand_path("../../VERSION", __FILE__))
+  abort File.read(File.expand_path("../VERSION", __dir__))
 end
 
 ruby_extensions = %w[
@@ -82,7 +82,7 @@ Git
     next true if ruby_extensions.include?(File.extname(path))
 
     first_line = File.open(path, &:gets).to_s.encode("UTF-8", invalid: :replace)
-    next true if first_line =~ /#!.*ruby/
+    next true if /#!.*ruby/.match?(first_line)
 
     false
   end

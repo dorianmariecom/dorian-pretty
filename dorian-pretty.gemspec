@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/dorianmariecom/dorian-pretty"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
+  s.add_dependency "dorian-arguments"
   s.add_dependency "git"
   s.add_dependency "syntax_tree"
-  s.add_dependency "dorian-arguments"
 end
