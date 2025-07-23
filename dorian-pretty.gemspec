@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.add_dependency "dorian-arguments"
   s.add_dependency "git"
   s.add_dependency "syntax_tree"
-  s.required_ruby_version = ">= 3.1"
+  s.required_ruby_version = ">= 3.0"
 end
