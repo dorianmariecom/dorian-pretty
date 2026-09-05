@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/dorianmariecom/dorian-pretty"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
-  s.add_dependency "dorian-arguments"
-  s.add_dependency "git"
-  s.add_dependency "syntax_tree"
+  s.add_dependency "dorian-arguments", ">= 2.0.1", "< 3"
+  s.add_dependency "git", ">= 5.4.1", "< 6"
+  s.add_dependency "syntax_tree", ">= 6.3.0", "< 7"
   s.required_ruby_version = ">= 4.0"
 end
